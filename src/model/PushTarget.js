@@ -25,7 +25,7 @@
     if (!root.CallbackAndRelatedApIs) {
       root.CallbackAndRelatedApIs = {};
     }
-    root.CallbackAndRelatedApIs.CallInRequestsStatus500 = factory(root.CallbackAndRelatedApIs.ApiClient);
+    root.CallbackAndRelatedApIs.PushTarget = factory(root.CallbackAndRelatedApIs.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,63 +34,56 @@
 
 
   /**
-   * The CallInRequestsStatus500 model module.
-   * @module model/CallInRequestsStatus500
+   * The PushTarget model module.
+   * @module model/PushTarget
    * @version 3.0.000.19.007
    */
 
   /**
-   * Constructs a new <code>CallInRequestsStatus500</code>.
-   * @alias module:model/CallInRequestsStatus500
+   * Constructs a new <code>PushTarget</code>.
+   * @alias module:model/PushTarget
    * @class
+   * @param channel {String} Channel name. The only accepted value is 'FCM' for now.
+   * @param target {String} Token identifying the recipient of the message.
    */
-  var exports = function() {
+  var exports = function(channel, target) {
     var _this = this;
 
-
-
-
+    _this['channel'] = channel;
+    _this['target'] = target;
   };
 
   /**
-   * Constructs a <code>CallInRequestsStatus500</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PushTarget</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/CallInRequestsStatus500} obj Optional instance to populate.
-   * @return {module:model/CallInRequestsStatus500} The populated <code>CallInRequestsStatus500</code> instance.
+   * @param {module:model/PushTarget} obj Optional instance to populate.
+   * @return {module:model/PushTarget} The populated <code>PushTarget</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('code')) {
-        obj['code'] = ApiClient.convertToType(data['code'], 'Number');
+      if (data.hasOwnProperty('channel')) {
+        obj['channel'] = ApiClient.convertToType(data['channel'], 'String');
       }
-      if (data.hasOwnProperty('message')) {
-        obj['message'] = ApiClient.convertToType(data['message'], 'String');
-      }
-      if (data.hasOwnProperty('corrId')) {
-        obj['corrId'] = ApiClient.convertToType(data['corrId'], 'String');
+      if (data.hasOwnProperty('target')) {
+        obj['target'] = ApiClient.convertToType(data['target'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * GES Status code.
-   * @member {Number} code
+   * Channel name. The only accepted value is 'FCM' for now.
+   * @member {String} channel
    */
-  exports.prototype['code'] = undefined;
+  exports.prototype['channel'] = undefined;
   /**
-   * Cause of failure
-   * @member {String} message
+   * Token identifying the recipient of the message.
+   * @member {String} target
    */
-  exports.prototype['message'] = undefined;
-  /**
-   * Server-side correlation ID associated with the request.
-   * @member {String} corrId
-   */
-  exports.prototype['corrId'] = undefined;
+  exports.prototype['target'] = undefined;
 
 
 

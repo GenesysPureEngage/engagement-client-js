@@ -16,32 +16,32 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CancelCallbackStatus404'], factory);
+    define(['ApiClient', 'model/QueueStatus400'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./CancelCallbackStatus404'));
+    module.exports = factory(require('../ApiClient'), require('./QueueStatus400'));
   } else {
     // Browser globals (root is window)
     if (!root.CallbackAndRelatedApIs) {
       root.CallbackAndRelatedApIs = {};
     }
-    root.CallbackAndRelatedApIs.CancelCallbackResponse404 = factory(root.CallbackAndRelatedApIs.ApiClient, root.CallbackAndRelatedApIs.CancelCallbackStatus404);
+    root.CallbackAndRelatedApIs.QueueStatusResponse400 = factory(root.CallbackAndRelatedApIs.ApiClient, root.CallbackAndRelatedApIs.QueueStatus400);
   }
-}(this, function(ApiClient, CancelCallbackStatus404) {
+}(this, function(ApiClient, QueueStatus400) {
   'use strict';
 
 
 
 
   /**
-   * The CancelCallbackResponse404 model module.
-   * @module model/CancelCallbackResponse404
+   * The QueueStatusResponse400 model module.
+   * @module model/QueueStatusResponse400
    * @version 3.0.000.19.007
    */
 
   /**
-   * Constructs a new <code>CancelCallbackResponse404</code>.
-   * @alias module:model/CancelCallbackResponse404
+   * Constructs a new <code>QueueStatusResponse400</code>.
+   * @alias module:model/QueueStatusResponse400
    * @class
    */
   var exports = function() {
@@ -51,25 +51,25 @@
   };
 
   /**
-   * Constructs a <code>CancelCallbackResponse404</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>QueueStatusResponse400</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/CancelCallbackResponse404} obj Optional instance to populate.
-   * @return {module:model/CancelCallbackResponse404} The populated <code>CancelCallbackResponse404</code> instance.
+   * @param {module:model/QueueStatusResponse400} obj Optional instance to populate.
+   * @return {module:model/QueueStatusResponse400} The populated <code>QueueStatusResponse400</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
       if (data.hasOwnProperty('status')) {
-        obj['status'] = CancelCallbackStatus404.constructFromObject(data['status']);
+        obj['status'] = QueueStatus400.constructFromObject(data['status']);
       }
     }
     return obj;
   }
 
   /**
-   * @member {module:model/CancelCallbackStatus404} status
+   * @member {module:model/QueueStatus400} status
    */
   exports.prototype['status'] = undefined;
 

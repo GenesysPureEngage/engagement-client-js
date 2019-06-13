@@ -16,62 +16,70 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CancelCallbackStatus404'], factory);
+    define(['ApiClient', 'model/QueueStatus', 'model/SuccessStatus200'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./CancelCallbackStatus404'));
+    module.exports = factory(require('../ApiClient'), require('./QueueStatus'), require('./SuccessStatus200'));
   } else {
     // Browser globals (root is window)
     if (!root.CallbackAndRelatedApIs) {
       root.CallbackAndRelatedApIs = {};
     }
-    root.CallbackAndRelatedApIs.CancelCallbackResponse404 = factory(root.CallbackAndRelatedApIs.ApiClient, root.CallbackAndRelatedApIs.CancelCallbackStatus404);
+    root.CallbackAndRelatedApIs.QueueStatusResponse200 = factory(root.CallbackAndRelatedApIs.ApiClient, root.CallbackAndRelatedApIs.QueueStatus, root.CallbackAndRelatedApIs.SuccessStatus200);
   }
-}(this, function(ApiClient, CancelCallbackStatus404) {
+}(this, function(ApiClient, QueueStatus, SuccessStatus200) {
   'use strict';
 
 
 
 
   /**
-   * The CancelCallbackResponse404 model module.
-   * @module model/CancelCallbackResponse404
+   * The QueueStatusResponse200 model module.
+   * @module model/QueueStatusResponse200
    * @version 3.0.000.19.007
    */
 
   /**
-   * Constructs a new <code>CancelCallbackResponse404</code>.
-   * @alias module:model/CancelCallbackResponse404
+   * Constructs a new <code>QueueStatusResponse200</code>.
+   * @alias module:model/QueueStatusResponse200
    * @class
    */
   var exports = function() {
     var _this = this;
 
 
+
   };
 
   /**
-   * Constructs a <code>CancelCallbackResponse404</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>QueueStatusResponse200</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/CancelCallbackResponse404} obj Optional instance to populate.
-   * @return {module:model/CancelCallbackResponse404} The populated <code>CancelCallbackResponse404</code> instance.
+   * @param {module:model/QueueStatusResponse200} obj Optional instance to populate.
+   * @return {module:model/QueueStatusResponse200} The populated <code>QueueStatusResponse200</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
       if (data.hasOwnProperty('status')) {
-        obj['status'] = CancelCallbackStatus404.constructFromObject(data['status']);
+        obj['status'] = SuccessStatus200.constructFromObject(data['status']);
+      }
+      if (data.hasOwnProperty('data')) {
+        obj['data'] = QueueStatus.constructFromObject(data['data']);
       }
     }
     return obj;
   }
 
   /**
-   * @member {module:model/CancelCallbackStatus404} status
+   * @member {module:model/SuccessStatus200} status
    */
   exports.prototype['status'] = undefined;
+  /**
+   * @member {module:model/QueueStatus} data
+   */
+  exports.prototype['data'] = undefined;
 
 
 

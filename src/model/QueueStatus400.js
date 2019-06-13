@@ -25,7 +25,7 @@
     if (!root.CallbackAndRelatedApIs) {
       root.CallbackAndRelatedApIs = {};
     }
-    root.CallbackAndRelatedApIs.CallInRequestsStatus500 = factory(root.CallbackAndRelatedApIs.ApiClient);
+    root.CallbackAndRelatedApIs.QueueStatus400 = factory(root.CallbackAndRelatedApIs.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,14 +34,14 @@
 
 
   /**
-   * The CallInRequestsStatus500 model module.
-   * @module model/CallInRequestsStatus500
+   * The QueueStatus400 model module.
+   * @module model/QueueStatus400
    * @version 3.0.000.19.007
    */
 
   /**
-   * Constructs a new <code>CallInRequestsStatus500</code>.
-   * @alias module:model/CallInRequestsStatus500
+   * Constructs a new <code>QueueStatus400</code>.
+   * @alias module:model/QueueStatus400
    * @class
    */
   var exports = function() {
@@ -53,11 +53,11 @@
   };
 
   /**
-   * Constructs a <code>CallInRequestsStatus500</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>QueueStatus400</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/CallInRequestsStatus500} obj Optional instance to populate.
-   * @return {module:model/CallInRequestsStatus500} The populated <code>CallInRequestsStatus500</code> instance.
+   * @param {module:model/QueueStatus400} obj Optional instance to populate.
+   * @return {module:model/QueueStatus400} The populated <code>QueueStatus400</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -82,7 +82,7 @@
    */
   exports.prototype['code'] = undefined;
   /**
-   * Cause of failure
+   * Cause of failure.
    * @member {String} message
    */
   exports.prototype['message'] = undefined;
