@@ -25,7 +25,7 @@
     if (!root.CallbackAndRelatedApIs) {
       root.CallbackAndRelatedApIs = {};
     }
-    root.CallbackAndRelatedApIs.OpenForStatus400 = factory(root.CallbackAndRelatedApIs.ApiClient);
+    root.CallbackAndRelatedApIs.Statistics = factory(root.CallbackAndRelatedApIs.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,63 +34,37 @@
 
 
   /**
-   * The OpenForStatus400 model module.
-   * @module model/OpenForStatus400
+   * The Statistics model module.
+   * @module model/Statistics
    * @version 3.0.000.19.011
    */
 
   /**
-   * Constructs a new <code>OpenForStatus400</code>.
-   * @alias module:model/OpenForStatus400
+   * Constructs a new <code>Statistics</code>.
+   * The response from the GWS statistics API.
+   * @alias module:model/Statistics
    * @class
    */
   var exports = function() {
     var _this = this;
 
-
-
-
   };
 
   /**
-   * Constructs a <code>OpenForStatus400</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>Statistics</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/OpenForStatus400} obj Optional instance to populate.
-   * @return {module:model/OpenForStatus400} The populated <code>OpenForStatus400</code> instance.
+   * @param {module:model/Statistics} obj Optional instance to populate.
+   * @return {module:model/Statistics} The populated <code>Statistics</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('code')) {
-        obj['code'] = ApiClient.convertToType(data['code'], 'Number');
-      }
-      if (data.hasOwnProperty('message')) {
-        obj['message'] = ApiClient.convertToType(data['message'], 'String');
-      }
-      if (data.hasOwnProperty('corrId')) {
-        obj['corrId'] = ApiClient.convertToType(data['corrId'], 'String');
-      }
     }
     return obj;
   }
 
-  /**
-   * GES Status code.
-   * @member {Number} code
-   */
-  exports.prototype['code'] = undefined;
-  /**
-   * Cause of failure
-   * @member {String} message
-   */
-  exports.prototype['message'] = undefined;
-  /**
-   * Server-side correlation ID associated with the request.
-   * @member {String} corrId
-   */
-  exports.prototype['corrId'] = undefined;
 
 
 

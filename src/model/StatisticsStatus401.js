@@ -25,7 +25,7 @@
     if (!root.CallbackAndRelatedApIs) {
       root.CallbackAndRelatedApIs = {};
     }
-    root.CallbackAndRelatedApIs.OpenForStatus400 = factory(root.CallbackAndRelatedApIs.ApiClient);
+    root.CallbackAndRelatedApIs.StatisticsStatus401 = factory(root.CallbackAndRelatedApIs.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,14 +34,14 @@
 
 
   /**
-   * The OpenForStatus400 model module.
-   * @module model/OpenForStatus400
+   * The StatisticsStatus401 model module.
+   * @module model/StatisticsStatus401
    * @version 3.0.000.19.011
    */
 
   /**
-   * Constructs a new <code>OpenForStatus400</code>.
-   * @alias module:model/OpenForStatus400
+   * Constructs a new <code>StatisticsStatus401</code>.
+   * @alias module:model/StatisticsStatus401
    * @class
    */
   var exports = function() {
@@ -53,11 +53,11 @@
   };
 
   /**
-   * Constructs a <code>OpenForStatus400</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>StatisticsStatus401</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/OpenForStatus400} obj Optional instance to populate.
-   * @return {module:model/OpenForStatus400} The populated <code>OpenForStatus400</code> instance.
+   * @param {module:model/StatisticsStatus401} obj Optional instance to populate.
+   * @return {module:model/StatisticsStatus401} The populated <code>StatisticsStatus401</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -82,7 +82,7 @@
    */
   exports.prototype['code'] = undefined;
   /**
-   * Cause of failure
+   * Cause of failure.
    * @member {String} message
    */
   exports.prototype['message'] = undefined;

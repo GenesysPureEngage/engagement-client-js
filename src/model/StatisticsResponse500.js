@@ -16,32 +16,32 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/EstimatedWaitTimeStatus500'], factory);
+    define(['ApiClient', 'model/StatisticsStatus500'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./EstimatedWaitTimeStatus500'));
+    module.exports = factory(require('../ApiClient'), require('./StatisticsStatus500'));
   } else {
     // Browser globals (root is window)
     if (!root.CallbackAndRelatedApIs) {
       root.CallbackAndRelatedApIs = {};
     }
-    root.CallbackAndRelatedApIs.EstimatedWaitTimeResponse500 = factory(root.CallbackAndRelatedApIs.ApiClient, root.CallbackAndRelatedApIs.EstimatedWaitTimeStatus500);
+    root.CallbackAndRelatedApIs.StatisticsResponse500 = factory(root.CallbackAndRelatedApIs.ApiClient, root.CallbackAndRelatedApIs.StatisticsStatus500);
   }
-}(this, function(ApiClient, EstimatedWaitTimeStatus500) {
+}(this, function(ApiClient, StatisticsStatus500) {
   'use strict';
 
 
 
 
   /**
-   * The EstimatedWaitTimeResponse500 model module.
-   * @module model/EstimatedWaitTimeResponse500
+   * The StatisticsResponse500 model module.
+   * @module model/StatisticsResponse500
    * @version 3.0.000.19.011
    */
 
   /**
-   * Constructs a new <code>EstimatedWaitTimeResponse500</code>.
-   * @alias module:model/EstimatedWaitTimeResponse500
+   * Constructs a new <code>StatisticsResponse500</code>.
+   * @alias module:model/StatisticsResponse500
    * @class
    */
   var exports = function() {
@@ -51,25 +51,25 @@
   };
 
   /**
-   * Constructs a <code>EstimatedWaitTimeResponse500</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>StatisticsResponse500</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/EstimatedWaitTimeResponse500} obj Optional instance to populate.
-   * @return {module:model/EstimatedWaitTimeResponse500} The populated <code>EstimatedWaitTimeResponse500</code> instance.
+   * @param {module:model/StatisticsResponse500} obj Optional instance to populate.
+   * @return {module:model/StatisticsResponse500} The populated <code>StatisticsResponse500</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
       if (data.hasOwnProperty('status')) {
-        obj['status'] = EstimatedWaitTimeStatus500.constructFromObject(data['status']);
+        obj['status'] = StatisticsStatus500.constructFromObject(data['status']);
       }
     }
     return obj;
   }
 
   /**
-   * @member {module:model/EstimatedWaitTimeStatus500} status
+   * @member {module:model/StatisticsStatus500} status
    */
   exports.prototype['status'] = undefined;
 
